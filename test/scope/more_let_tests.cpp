@@ -119,6 +119,7 @@ main()
 #else
     int x = (let(_a = val(1), _b = val(2))[let(_b = _a)[ _a ]])(y);
 #endif
+    (void)x;
     //std::cout << x << " P2A "; //clang - 42 value - one step better
         BOOST_TEST(x == 1);
   }
