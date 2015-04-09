@@ -257,6 +257,8 @@ namespace boost { namespace phoenix {
         private:
             Cond const& cond;
 
+            switch_gen& operator=(const switch_gen&);
+
             template <typename Cases>
             typename expression::switch_<
                 Cond

@@ -422,6 +422,8 @@ namespace boost { namespace phoenix
             }
             Object const& obj;
             MemPtr ptr;
+        private:
+            mem_fun_ptr_gen& operator=(const mem_fun_ptr_gen&);
         };
         struct make_mem_fun_ptr_gen
             : proto::callable

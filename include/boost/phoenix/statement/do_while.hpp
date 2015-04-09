@@ -54,6 +54,8 @@ namespace boost { namespace phoenix
         }
 
         Do const& do_;
+    private:
+        do_while_gen& operator=(const do_while_gen&);
     };
 
     struct do_gen
