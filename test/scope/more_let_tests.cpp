@@ -105,6 +105,7 @@ main()
   {
     int y = 0;
     int x = (let(_a = val(1), _b = val(2))[let(_b = _a)[ _a ]])(y);
+    (void)x;
     //std::cout << x << " P2A "; //clang - 42 value - one step better
   }
   {

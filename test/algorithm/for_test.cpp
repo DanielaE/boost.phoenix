@@ -34,8 +34,8 @@ namespace
 
         std::string test_str("(123456789)");
         std::ostringstream out;
-        int iii;
-        int size = v.size();
+        size_t iii;
+        size_t size = v.size();
         (
             out << val("("),
             for_(ref(iii) = 0, ref(iii) < size, ++ref(iii) )
