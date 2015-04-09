@@ -13,7 +13,7 @@ using boost::phoenix::ref;
 using namespace phoenix::local_names;
 using boost::phoenix::arg_names::_1;
 
-int main(int argc, char *argv[])
+int main(int, char *[])
 {
   int x = 17;
   int y = phoenix::lambda(_a=ref(x))

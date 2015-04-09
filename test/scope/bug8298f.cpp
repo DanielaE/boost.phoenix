@@ -12,7 +12,7 @@ namespace phoenix = boost::phoenix;
 using namespace phoenix::local_names;
 using boost::phoenix::arg_names::_1;
 
-int main(int argc, char *argv[])
+int main(int, char *[])
 {
   int y = phoenix::lambda(_a=_1)
   [
