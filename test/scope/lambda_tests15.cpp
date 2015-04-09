@@ -24,7 +24,7 @@ int main()
     using boost::phoenix::arg_names::_1;
     using boost::phoenix::local_names::_a;
 
-    int x = 1, y = 10;
+    int x = 1;
     BOOST_TEST(
         (_1 + lambda(_a = _1)[_a + lambda[_a + 2]])(x)()(x) == 1+1+1+2
     );

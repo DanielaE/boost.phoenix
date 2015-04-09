@@ -18,6 +18,10 @@
 
 #include <boost/detail/lightweight_test.hpp>
 
+#ifdef _MSC_VER
+#pragma warning(disable: 4702) // unreachable code
+#endif
+
 struct base_exception : std::exception
 {
     explicit
