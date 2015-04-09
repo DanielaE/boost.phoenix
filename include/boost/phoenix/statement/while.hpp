@@ -54,6 +54,8 @@ namespace boost { namespace phoenix
         }
 
         Cond const& cond;
+    private:
+        while_gen& operator=(const while_gen&);
     };
 
     template <typename Cond>

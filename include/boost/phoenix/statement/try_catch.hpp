@@ -445,6 +445,8 @@ namespace boost { namespace phoenix
         }
 
         TryCatch const & try_catch;
+    private:
+        catch_gen& operator=(const catch_gen&);
     };
 
     template <typename TryCatch>
@@ -471,6 +473,8 @@ namespace boost { namespace phoenix
         }
 
         TryCatch const & try_catch;
+    private:
+        catch_all_gen& operator=(const catch_all_gen&);
     };
 
     template <
@@ -506,6 +510,8 @@ namespace boost { namespace phoenix
         }
 
         catch_all_gen<that_type> const catch_all;
+    private:
+        try_catch_actor& operator=(const try_catch_actor&);
     };
 
     struct try_gen

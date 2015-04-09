@@ -30,6 +30,8 @@ namespace boost { namespace phoenix
                 using boost::visit_each;
                 visit_each(visitor, t);
             }
+        private:
+            visit_each_impl& operator=(const visit_each_impl&);
         };
     }
 

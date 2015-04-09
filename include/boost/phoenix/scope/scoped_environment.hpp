@@ -156,6 +156,8 @@ namespace boost { namespace phoenix
                 return fusion::at<N>(seq.env);
             }
         };
+    private:
+        scoped_environment& operator=(const scoped_environment&);
     };
 
     template <typename Env, typename Dummy = void>
