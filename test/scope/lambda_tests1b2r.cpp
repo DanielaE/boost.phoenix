@@ -63,9 +63,8 @@ main()
     }
     */
     {
-        int x = 1, y = 10;
+        int x = 1;
 #if defined(BOOST_MSVC) && (BOOST_MSVC >= 1700)
-        int z;
         BOOST_TEST(
         (
                 _1 +
@@ -77,6 +76,7 @@ main()
         (x)()(x) == 1+1+1+2
         );
 #else
+        int y = 10;
         BOOST_TEST(
         (
                 _1 +
