@@ -36,7 +36,7 @@ namespace
         //std::ostringstream out;
         int iii;
         int x = 0;
-        int size = v.size();
+        int size = static_cast<int>(v.size());
             for_(ref(iii) = 0, ref(iii) < size, ++ref(iii) )
             [ ref(x) += arg1[ref(iii)] ] (v);
             BOOST_TEST(x == 45);
