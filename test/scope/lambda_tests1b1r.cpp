@@ -46,7 +46,6 @@ main()
         //long x2 = 2;
         //short x3 = 3;
         char const* y = "hello";
-        zzz z;
         //BOOST_TEST(lambda[_1](x)(y) == y);
         //BOOST_TEST(lambda(_a = _1)[_a](x)(y) == x);
 #if defined(BOOST_MSVC) && (BOOST_MSVC >= 1700)
