@@ -14,6 +14,7 @@
 
 #include <algorithm>
 #include <numeric>
+#include <random>
 
 #include <boost/phoenix/core/limits.hpp>
 #include <boost/phoenix/stl/algorithm/detail/has_sort.hpp>
@@ -36,6 +37,14 @@
 #include <boost/mpl/if.hpp>
 
 #include <boost/type_traits/is_void.hpp>
+
+namespace boost { namespace detail
+{
+inline std::random_device & get_common_random_device() {
+	static std::random_device generator;
+	return generator;
+}
+}}
 
 namespace boost { namespace phoenix { namespace impl
 {
@@ -522,13 +531,13 @@ namespace boost { namespace phoenix { namespace impl
         template<class R>
         void operator()(R& r) const
         {
-            return std::random_shuffle(detail::begin_(r), detail::end_(r));
+            return std::shuffle(detail::begin_(r), detail::end_(r), std::default_random_engine(boost::detail::get_common_random_device()()));
         }
 
         template<class R, class G>
         void operator()(R& r, G g) const
         {
-            return std::random_shuffle(detail::begin_(r), detail::end_(r), g);
+            return std::shuffle(detail::begin_(r), detail::end_(r), std::default_random_engine(static_cast<unsigned>(g(UINT_MAX))));
         }
     };
 
